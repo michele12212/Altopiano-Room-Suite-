@@ -84,33 +84,40 @@
           <span class="eyebrow">Richiesta diretta</span>
           <h2 class="section-title">Scrivici per una proposta su misura.</h2>
 
-          <form class="form" onsubmit="event.preventDefault(); alert('Grazie! Vi risponderemo al più presto.');">
+          <form id="bookingForm" class="form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms: sostituisci YOUR_ACCESS_KEY_HERE con la tua chiave da web3forms.com -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input type="hidden" name="subject" value="Nuova richiesta prenotazione — Altopiano Rooms Suite" />
+            <input type="hidden" name="from_name" value="Altopiano Rooms Suite" />
+            <!-- Honeypot anti-spam -->
+            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
+
             <div class="form__row">
               <div class="field">
                 <label for="nome">Nome e Cognome</label>
-                <input id="nome" type="text" required />
+                <input id="nome" name="nome" type="text" required />
               </div>
               <div class="field">
                 <label for="email">Email</label>
-                <input id="email" type="email" required />
+                <input id="email" name="email" type="email" required />
               </div>
             </div>
 
             <div class="form__row">
               <div class="field">
                 <label for="checkin">Check-in</label>
-                <input id="checkin" type="date" />
+                <input id="checkin" name="checkin" type="date" />
               </div>
               <div class="field">
                 <label for="checkout">Check-out</label>
-                <input id="checkout" type="date" />
+                <input id="checkout" name="checkout" type="date" />
               </div>
             </div>
 
             <div class="form__row">
               <div class="field">
                 <label for="ospiti">Ospiti</label>
-                <select id="ospiti">
+                <select id="ospiti" name="ospiti">
                   <option>1 ospite</option>
                   <option>2 ospiti</option>
                   <option>3 ospiti</option>
@@ -120,7 +127,7 @@
               </div>
               <div class="field">
                 <label for="camera">Tipologia camera</label>
-                <select id="camera">
+                <select id="camera" name="camera">
                   <option>Indifferente</option>
                   <option>Luxury Suite 1</option>
                   <option>Luxury Suite 2</option>
@@ -131,15 +138,65 @@
 
             <div class="field">
               <label for="messaggio">Messaggio</label>
-              <textarea id="messaggio" placeholder="Raccontaci di più sul tuo soggiorno…"></textarea>
+              <textarea id="messaggio" name="messaggio" placeholder="Raccontaci di più sul tuo soggiorno…"></textarea>
             </div>
 
             <div style="margin-top:1rem;">
-              <button type="submit" class="btn btn--gold">
+              <button type="submit" class="btn btn--gold" id="bookingSubmit">
                 Invia richiesta <span class="arrow">→</span>
               </button>
             </div>
+
+            <div id="bookingResult" style="margin-top:1.25rem; display:none; padding:1rem 1.25rem; border-radius:4px; font-size:.95rem;"></div>
           </form>
+
+          <script>
+            (function () {
+              const form = document.getElementById('bookingForm');
+              const result = document.getElementById('bookingResult');
+              const btn = document.getElementById('bookingSubmit');
+              if (!form) return;
+
+              form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const data = new FormData(form);
+                btn.disabled = true;
+                const originalBtnHTML = btn.innerHTML;
+                btn.innerHTML = 'Invio in corso…';
+                result.style.display = 'block';
+                result.style.background = '#f5f0e6';
+                result.style.color = '#444';
+                result.style.border = '1px solid #e5dfd3';
+                result.textContent = 'Stiamo inviando la tua richiesta…';
+
+                try {
+                  const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                  });
+                  const json = await res.json();
+                  if (res.ok && json.success) {
+                    result.style.background = '#eaf5ec';
+                    result.style.color = '#2d6a3e';
+                    result.style.border = '1px solid #c5e1cb';
+                    result.textContent = 'Grazie! La tua richiesta è stata inviata. Ti risponderemo al più presto.';
+                    form.reset();
+                  } else {
+                    throw new Error(json.message || 'Errore sconosciuto');
+                  }
+                } catch (err) {
+                  result.style.background = '#fbeaea';
+                  result.style.color = '#9a2727';
+                  result.style.border = '1px solid #f1c5c5';
+                  result.textContent = 'Ops, qualcosa è andato storto. Riprova o scrivici direttamente a info@altopianorooms.it.';
+                } finally {
+                  btn.disabled = false;
+                  btn.innerHTML = originalBtnHTML;
+                }
+              });
+            })();
+          </script>
         </div>
       </div>
     </div>
