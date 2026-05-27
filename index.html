@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altopiano Rooms Suite — B&amp;B di charme a Foggia</title>
+  <meta name="description" content="Altopiano Rooms Suite — soggiorno raffinato nel cuore di Foggia. Camere eleganti, jacuzzi, reception 24/7 e ospitalità pugliese.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============== NAV ============== -->
+  <header class="nav nav--light" id="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">Altopiano</span>
+        <span class="brand__tag">Rooms · Suite</span>
+      </a>
+
+      <nav class="nav__menu" aria-label="Navigazione principale">
+        <a class="nav__link is-active" href="index.html">Home</a>
+        <a class="nav__link" href="camere.html">Le camere</a>
+        <a class="nav__link" href="guida-soggiorno.html">Guida soggiorno</a>
+        <a class="nav__link" href="chi-siamo.html">Chi siamo</a>
+        <a class="nav__link" href="contatti.html">Contatti</a>
+        <a class="nav__cta" href="contatti.html">Prenota</a>
+      </nav>
+
+      <button class="nav__toggle" aria-label="Menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero">
+    <div class="hero__media">
+      <img src="assets/images/camera-romance.jpg" alt="Camera Altopiano Rooms Suite" />
+    </div>
+
+    <div class="wrap hero__content">
+      <span class="eyebrow hero__eyebrow">B&amp;B di charme · Foggia</span>
+      <h1>
+        Benvenuti da
+        <span class="accent">Altopiano Rooms Suite</span>
+      </h1>
+      <p class="hero__sub">
+        Una dimora intima nel cuore della Puglia, dove design contemporaneo,
+        comfort assoluto e ospitalità autentica si incontrano per regalarvi
+        un soggiorno indimenticabile.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--gold" href="camere.html">
+          Scopri le camere
+          <span class="arrow">→</span>
+        </a>
+        <a class="btn btn--ghost-light" href="contatti.html">Prenota ora</a>
+      </div>
+    </div>
+
+    <span class="hero__scroll">Scroll down</span>
+  </section>
+
+  <!-- ============== PERCHÉ SCEGLIERCI ============== -->
+  <section class="section why">
+    <div class="wrap">
+      <span class="eyebrow">Perché sceglierci</span>
+      <h2 class="section-title">Quattro promesse, una sola esperienza.</h2>
+      <p class="lead">
+        Ogni dettaglio della nostra struttura è pensato per accogliervi
+        come ospiti di una casa elegante, non come clienti di un hotel.
+      </p>
+
+      <div class="why__grid">
+        <article class="feature reveal">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M8 28c0-6 4-10 10-10h12c6 0 10 4 10 10v8H8v-8z"/>
+            <path d="M14 18V14c0-3 2-5 5-5h10c3 0 5 2 5 5v4"/>
+            <path d="M8 36v4M40 36v4"/>
+          </svg>
+          <h3>Comfort</h3>
+          <p>Lenzuola di qualità, materassi premium, insonorizzazione totale e
+             climatizzazione individuale per un riposo perfetto.</p>
+        </article>
+
+        <article class="feature reveal">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M24 4l4 8h8l-6 6 2 8-8-4-8 4 2-8-6-6h8z"/>
+            <path d="M12 36h24"/>
+            <path d="M16 42h16"/>
+          </svg>
+          <h3>Pulizia</h3>
+          <p>Igiene impeccabile certificata in tutti gli ambienti, prodotti di
+             cortesia di profumeria e biancheria sempre fresca.</p>
+        </article>
+
+        <article class="feature reveal">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <circle cx="24" cy="24" r="14"/>
+            <circle cx="24" cy="24" r="6"/>
+            <path d="M24 4v6M24 38v6M4 24h6M38 24h6"/>
+          </svg>
+          <h3>Dettagli</h3>
+          <p>Macchina del caffè, accappatoio, Netflix sulla smart TV, minibar:
+             ogni elemento studiato per superare le vostre aspettative.</p>
+        </article>
+
+        <article class="feature reveal">
+          <svg class="feature__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M24 6l16 8v10c0 10-7 16-16 18-9-2-16-8-16-18V14l16-8z"/>
+            <path d="M18 24l4 4 8-8"/>
+          </svg>
+          <h3>Zona tranquilla</h3>
+          <p>A pochi minuti dal centro ma in una via riservata, lontana dal
+             traffico: il silenzio è parte dell'esperienza.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SFOGLIA LE NOSTRE CAMERE ============== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="rooms__header">
+        <div>
+          <span class="eyebrow">Le nostre camere</span>
+          <h2 class="section-title">Suite e camere disegnate per stupire.</h2>
+        </div>
+        <a class="btn btn--ghost" href="camere.html">
+          Vedi tutte le camere <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="rooms__grid">
+        <a class="room-card room-card--lg" href="camere.html">
+          <img src="assets/images/camera-romance.jpg" alt="Luxury Suite 1" />
+          <div class="room-card__overlay">
+            <span class="room-card__tag">Luxury Suite</span>
+            <h3>Luxury Suite 1</h3>
+            <span class="room-card__meta">Letto king-size · Atmosfera intima</span>
+          </div>
+        </a>
+
+        <a class="room-card room-card--md" href="camere.html">
+          <img src="assets/images/camera-goodvibes.png" alt="Luxury Suite 2" />
+          <div class="room-card__overlay">
+            <span class="room-card__tag">Luxury Suite</span>
+            <h3>Luxury Suite 2</h3>
+            <span class="room-card__meta">Stile contemporaneo · Insonorizzata</span>
+          </div>
+        </a>
+
+        <a class="room-card room-card--md" href="camere.html">
+          <img src="assets/images/camera-love.png" alt="Luxury Suite 3" />
+          <div class="room-card__overlay">
+            <span class="room-card__tag">Luxury Suite</span>
+            <h3>Luxury Suite 3</h3>
+            <span class="room-card__meta">Toni sage · Luce calda</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== RECENSIONI ============== -->
+  <section class="section reviews" style="background:var(--ivory-warm, #f5f0e6);">
+    <div class="wrap">
+      <div style="display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:2rem; margin-bottom:3rem;">
+        <div>
+          <span class="eyebrow">Recensioni</span>
+          <h2 class="section-title" style="margin-top:.5rem;">Le voci dei nostri ospiti.</h2>
+          <p class="lead" style="max-width:560px;">
+            Ogni stella è la conferma di un soggiorno vissuto con cura.
+            Ecco cosa raccontano di noi chi ci ha scelto.
+          </p>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:4rem; line-height:1; color:var(--sand-dark, #b8975a); font-weight:500;">9,3<span style="font-size:1.5rem; color:var(--muted, #999);">/10</span></div>
+          <div style="font-size:.75rem; letter-spacing:.25em; text-transform:uppercase; color:var(--muted, #999); margin-top:.5rem;">Media recensioni</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:1.75rem;">
+
+        <!-- Recensione 1 -->
+        <article style="background:#fff; padding:2rem; border:1px solid var(--line, #e5dfd3); display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; gap:.2rem; color:var(--sand-dark, #b8975a); font-size:1.1rem;">★★★★★</div>
+            <span style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.6rem; color:var(--sand-dark, #b8975a); font-weight:500;">10<span style="font-size:.9rem; color:var(--muted, #999);">/10</span></span>
+          </div>
+          <h3 style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.35rem; margin:0; font-weight:500;">Eccezionale</h3>
+          <p style="margin:0; line-height:1.7; color:#444;">
+            Vasca idromassaggio, snack e acqua in camera, pulizia, bagno
+            accessoriato con cotton fioc e salviette struccanti.
+          </p>
+          <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--line, #e5dfd3); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:600;">Cristian</div>
+              <div style="font-size:.85rem; color:var(--muted, #999);">Italia · Viaggiatore singolo</div>
+            </div>
+            <span style="font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted, #999);">Mag 2026</span>
+          </div>
+        </article>
+
+        <!-- Recensione 2 -->
+        <article style="background:#fff; padding:2rem; border:1px solid var(--line, #e5dfd3); display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; gap:.2rem; color:var(--sand-dark, #b8975a); font-size:1.1rem;">★★★★★</div>
+            <span style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.6rem; color:var(--sand-dark, #b8975a); font-weight:500;">10<span style="font-size:.9rem; color:var(--muted, #999);">/10</span></span>
+          </div>
+          <h3 style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.35rem; margin:0; font-weight:500;">Proprietari gentilissimi</h3>
+          <p style="margin:0; line-height:1.7; color:#444;">
+            Struttura stupenda (con vasca idromassaggio spettacolare) e vicinissima
+            alla stazione. Tutto perfetto, davvero nulla da segnalare.
+          </p>
+          <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--line, #e5dfd3); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:600;">Marco</div>
+              <div style="font-size:.85rem; color:var(--muted, #999);">Italia · Coppia</div>
+            </div>
+            <span style="font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted, #999);">Apr 2026</span>
+          </div>
+        </article>
+
+        <!-- Recensione 3 -->
+        <article style="background:#fff; padding:2rem; border:1px solid var(--line, #e5dfd3); display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; gap:.2rem; color:var(--sand-dark, #b8975a); font-size:1.1rem;">★★★★★</div>
+            <span style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.6rem; color:var(--sand-dark, #b8975a); font-weight:500;">9,0<span style="font-size:.9rem; color:var(--muted, #999);">/10</span></span>
+          </div>
+          <h3 style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.35rem; margin:0; font-weight:500;">Posizione eccezionale, tutti i comfort</h3>
+          <p style="margin:0; line-height:1.7; color:#444;">
+            A 1 minuto dalla stazione e dalle fermate Flixbus. Personale gentilissimo,
+            check-in a tutte le ore. La stanza è dotata di ogni comfort: macchinetta
+            caffè con cialde, luci soffuse, minifrigo, asciugacapelli, letto comodo
+            e la chicca è la doccia armocromatica.
+          </p>
+          <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--line, #e5dfd3); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:600;">Arianna</div>
+              <div style="font-size:.85rem; color:var(--muted, #999);">Italia · Viaggiatore singolo</div>
+            </div>
+            <span style="font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted, #999);">Mar 2026</span>
+          </div>
+        </article>
+
+        <!-- Recensione 4 -->
+        <article style="background:#fff; padding:2rem; border:1px solid var(--line, #e5dfd3); display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; gap:.2rem; color:var(--sand-dark, #b8975a); font-size:1.1rem;">★★★★★</div>
+            <span style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.6rem; color:var(--sand-dark, #b8975a); font-weight:500;">9,0<span style="font-size:.9rem; color:var(--muted, #999);">/10</span></span>
+          </div>
+          <h3 style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.35rem; margin:0; font-weight:500;">Eccellente, ci ritorneremo</h3>
+          <p style="margin:0; line-height:1.7; color:#444;">
+            A pochi passi dalla stazione, struttura meravigliosa e molto accogliente.
+            Il proprietario Antonio gentile e disponibile, ci ha permesso il check-in
+            in anticipo. Stanza pulita, letto comodo, doccia fantastica. Totale relax.
+          </p>
+          <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--line, #e5dfd3); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:600;">Tricarico</div>
+              <div style="font-size:.85rem; color:var(--muted, #999);">Italia · Coppia</div>
+            </div>
+            <span style="font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted, #999);">Mar 2026</span>
+          </div>
+        </article>
+
+        <!-- Recensione 5 -->
+        <article style="background:#fff; padding:2rem; border:1px solid var(--line, #e5dfd3); display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; gap:.2rem; color:var(--sand-dark, #b8975a); font-size:1.1rem;">★★★★★</div>
+            <span style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.6rem; color:var(--sand-dark, #b8975a); font-weight:500;">10<span style="font-size:.9rem; color:var(--muted, #999);">/10</span></span>
+          </div>
+          <h3 style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.35rem; margin:0; font-weight:500;">Eccezionale</h3>
+          <p style="margin:0; line-height:1.7; color:#444;">
+            Il ragazzo Antonio, una brava persona, educata e gentile. Cinque stelle
+            assolute per accoglienza e disponibilità.
+          </p>
+          <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--line, #e5dfd3); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:600;">Romeo</div>
+              <div style="font-size:.85rem; color:var(--muted, #999);">Italia · Viaggiatore singolo</div>
+            </div>
+            <span style="font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted, #999);">Gen 2026</span>
+          </div>
+        </article>
+
+        <!-- Recensione 6 -->
+        <article style="background:#fff; padding:2rem; border:1px solid var(--line, #e5dfd3); display:flex; flex-direction:column; gap:1.25rem;">
+          <div style="display:flex; align-items:center; justify-content:space-between;">
+            <div style="display:flex; gap:.2rem; color:var(--sand-dark, #b8975a); font-size:1.1rem;">★★★★★</div>
+            <span style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.6rem; color:var(--sand-dark, #b8975a); font-weight:500;">9,0<span style="font-size:.9rem; color:var(--muted, #999);">/10</span></span>
+          </div>
+          <h3 style="font-family:var(--serif, 'Cormorant Garamond', serif); font-size:1.35rem; margin:0; font-weight:500;">Ottimo rapporto qualità-prezzo</h3>
+          <p style="margin:0; line-height:1.7; color:#444;">
+            Stanza molto pulita, il gestore super disponibile. La vasca idromassaggio
+            top. Vicino alla stazione, a 3 minuti a piedi dal centro.
+          </p>
+          <div style="margin-top:auto; padding-top:1rem; border-top:1px solid var(--line, #e5dfd3); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:600;">Federica</div>
+              <div style="font-size:.85rem; color:var(--muted, #999);">Italia · Coppia</div>
+            </div>
+            <span style="font-size:.75rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted, #999);">Dic 2025</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SCOPRI FOGGIA ============== -->
+  <section class="section foggia">
+    <div class="wrap">
+      <div class="foggia__grid">
+        <div>
+          <span class="eyebrow">Scopri Foggia</span>
+          <h2 class="section-title">Una città da vivere, a un passo dalla soglia.</h2>
+          <p class="lead">
+            Dalla Cattedrale ai parchi urbani, dai sapori tradizionali alla
+            natura del Tavoliere: tutto ciò che amerete di Foggia è a pochi
+            minuti dalla struttura.
+          </p>
+
+          <div class="foggia__list">
+            <div class="foggia__item">
+              <span class="foggia__item__cat">Parchi</span>
+              <span class="foggia__item__name">Parco Urbano Karol Wojtyla</span>
+              <span class="foggia__item__dist">650 m</span>
+            </div>
+            <div class="foggia__item">
+              <span class="foggia__item__cat">Cultura</span>
+              <span class="foggia__item__name">Cattedrale S. Maria Icona Vetere</span>
+              <span class="foggia__item__dist">1,1 km</span>
+            </div>
+            <div class="foggia__item">
+              <span class="foggia__item__cat">Parchi</span>
+              <span class="foggia__item__name">Parco San Felice</span>
+              <span class="foggia__item__dist">1,8 km</span>
+            </div>
+            <div class="foggia__item">
+              <span class="foggia__item__cat">Trasporti</span>
+              <span class="foggia__item__name">Stazione Ferroviaria di Foggia</span>
+              <span class="foggia__item__dist">1,2 km</span>
+            </div>
+            <div class="foggia__item">
+              <span class="foggia__item__cat">Natura</span>
+              <span class="foggia__item__name">Bosco Incoronata</span>
+              <span class="foggia__item__dist">14 km</span>
+            </div>
+          </div>
+
+          <div style="margin-top:2.5rem;">
+            <a class="btn btn--ghost-light" href="guida-soggiorno.html">
+              Apri la guida soggiorno <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="foggia__image">
+          <img src="assets/images/balcone.png" alt="Vista dalla terrazza" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DOVE SIAMO ============== -->
+  <section class="section location" id="dove-siamo">
+    <div class="wrap">
+      <span class="eyebrow">Dove siamo</span>
+      <h2 class="section-title">Via Giuseppe Rosati 133, Foggia.</h2>
+
+      <div class="location__grid">
+        <div class="location__info">
+          <p class="lead">
+            Nel cuore della città, in una via riservata e ben servita. Raggiungerci
+            è semplice sia in auto, sia in treno, sia in aereo.
+          </p>
+          <ul>
+            <li><span>Indirizzo</span><span>Via Giuseppe Rosati, 133 — 71121 Foggia (FG)</span></li>
+            <li><span>Telefono</span><span>+39 392 357 5870</span></li>
+            <li><span>Email</span><span>info@altopianorooms.it</span></li>
+            <li><span>Reception</span><span>Aperta 24/7 · staff multilingue</span></li>
+            <li><span>Check-in</span><span>Arrivo H24 · Express</span></li>
+            <li><span>Check-out</span><span>00:00 — 10:00</span></li>
+          </ul>
+
+          <div style="margin-top:2rem;">
+            <a class="btn btn--gold" href="contatti.html">
+              Contattaci <span class="arrow">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="location__map">
+          <iframe
+            src="https://www.google.com/maps?q=Via+Giuseppe+Rosati+133,+Foggia&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            title="Mappa Altopiano Rooms Suite">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Altopiano</div>
+          <div class="footer__tag">Rooms · Suite</div>
+          <p class="footer__about">
+            Un B&amp;B di charme nel cuore di Foggia. Eleganza,
+            comfort e accoglienza autentica per ogni vostro soggiorno.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navigazione</h4>
+          <ul class="footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="camere.html">Le camere</a></li>
+            <li><a href="guida-soggiorno.html">Guida soggiorno</a></li>
+            <li><a href="chi-siamo.html">Chi siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contatti</h4>
+          <ul class="footer__list">
+            <li>Via Giuseppe Rosati 133</li>
+            <li>71121 Foggia (FG)</li>
+            <li>info@altopianorooms.it</li>
+            <li>+39 392 357 5870</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Reception</h4>
+          <ul class="footer__list">
+            <li>Aperta 24/7</li>
+            <li>Multilingue</li>
+            <li>IT · EN · DE · ES · FR</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2026 Altopiano Rooms Suite — Tutti i diritti riservati.</span>
+        <span>P.IVA · Privacy · Cookie Policy</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

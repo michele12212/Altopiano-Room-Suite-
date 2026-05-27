@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatti — Altopiano Rooms Suite</title>
+  <meta name="description" content="Contatta Altopiano Rooms Suite a Foggia. Reception aperta 24/7, staff multilingue, prenotazioni dirette.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="nav nav--light" id="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">Altopiano</span>
+        <span class="brand__tag">Rooms · Suite</span>
+      </a>
+      <nav class="nav__menu">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="camere.html">Le camere</a>
+        <a class="nav__link" href="guida-soggiorno.html">Guida soggiorno</a>
+        <a class="nav__link" href="chi-siamo.html">Chi siamo</a>
+        <a class="nav__link is-active" href="contatti.html">Contatti</a>
+        <a class="nav__cta" href="contatti.html">Prenota</a>
+      </nav>
+      <button class="nav__toggle" aria-label="Menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero" style="min-height: 55vh;">
+    <img src="assets/images/bagno-marmo-blu.png" alt="Contatti" />
+    <div class="wrap page-hero__content">
+      <span class="eyebrow">Contatti</span>
+      <h1>Parliamo del<br/>vostro soggiorno.</h1>
+      <p>Reception aperta 24/7. Scriveteci o chiamateci: rispondiamo
+         sempre entro poche ore.</p>
+    </div>
+  </section>
+
+  <!-- ============ INFO + FORM ============ -->
+  <section class="section">
+    <div class="wrap">
+      <div style="display:grid; grid-template-columns: 1fr 1.3fr; gap: clamp(2rem, 6vw, 5rem); align-items:flex-start;" class="contact-grid">
+
+        <!-- INFO -->
+        <div>
+          <span class="eyebrow">Informazioni</span>
+          <h2 class="section-title">In quattro modi diversi, sempre raggiungibili.</h2>
+
+          <ul style="display:grid; gap:1.5rem; margin-top:2rem;">
+            <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line);">
+              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Indirizzo</span>
+              <span>Via Giuseppe Rosati, 133<br/>71121 Foggia (FG) — Italia</span>
+            </li>
+            <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line);">
+              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Telefono</span>
+              <span>+39 392 357 5870<br/><span style="font-size:.85rem; color:var(--muted);">Reception 24/7</span></span>
+            </li>
+            <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line);">
+              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Email</span>
+              <span>info@altopianorooms.it</span>
+            </li>
+            <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line);">
+              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Whatsapp</span>
+              <span>+39 392 357 5870</span>
+            </li>
+            <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem;">
+              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Lingue</span>
+              <span>Italiano · Inglese · Tedesco · Spagnolo · Francese</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- FORM -->
+        <div>
+          <span class="eyebrow">Richiesta diretta</span>
+          <h2 class="section-title">Scrivici per una proposta su misura.</h2>
+
+          <form class="form" onsubmit="event.preventDefault(); alert('Grazie! Vi risponderemo al più presto.');">
+            <div class="form__row">
+              <div class="field">
+                <label for="nome">Nome e Cognome</label>
+                <input id="nome" type="text" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" required />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="checkin">Check-in</label>
+                <input id="checkin" type="date" />
+              </div>
+              <div class="field">
+                <label for="checkout">Check-out</label>
+                <input id="checkout" type="date" />
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="field">
+                <label for="ospiti">Ospiti</label>
+                <select id="ospiti">
+                  <option>1 ospite</option>
+                  <option>2 ospiti</option>
+                  <option>3 ospiti</option>
+                  <option>4 ospiti</option>
+                  <option>5+ ospiti</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="camera">Tipologia camera</label>
+                <select id="camera">
+                  <option>Indifferente</option>
+                  <option>Luxury Suite 1</option>
+                  <option>Luxury Suite 2</option>
+                  <option>Luxury Suite 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" placeholder="Raccontaci di più sul tuo soggiorno…"></textarea>
+            </div>
+
+            <div style="margin-top:1rem;">
+              <button type="submit" class="btn btn--gold">
+                Invia richiesta <span class="arrow">→</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MAP ============ -->
+  <section class="section location" style="padding-top:0;">
+    <div class="wrap">
+      <span class="eyebrow">Dove siamo</span>
+      <h2 class="section-title">Via Giuseppe Rosati 133, Foggia.</h2>
+      <div class="location__map" style="margin-top:2rem; min-height: 500px;">
+        <iframe
+          src="https://www.google.com/maps?q=Via+Giuseppe+Rosati+133,+Foggia&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          title="Mappa Altopiano Rooms Suite">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">Altopiano</div>
+          <div class="footer__tag">Rooms · Suite</div>
+          <p class="footer__about">
+            Un B&amp;B di charme nel cuore di Foggia. Eleganza,
+            comfort e accoglienza autentica per ogni vostro soggiorno.
+          </p>
+        </div>
+        <div>
+          <h4>Navigazione</h4>
+          <ul class="footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="camere.html">Le camere</a></li>
+            <li><a href="guida-soggiorno.html">Guida soggiorno</a></li>
+            <li><a href="chi-siamo.html">Chi siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contatti</h4>
+          <ul class="footer__list">
+            <li>Via Giuseppe Rosati 133</li>
+            <li>71121 Foggia (FG)</li>
+            <li>info@altopianorooms.it</li>
+            <li>+39 392 357 5870</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Reception</h4>
+          <ul class="footer__list">
+            <li>Aperta 24/7</li>
+            <li>Multilingue</li>
+            <li>IT · EN · DE · ES · FR</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Altopiano Rooms Suite — Tutti i diritti riservati.</span>
+        <span>P.IVA · Privacy · Cookie Policy</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+  <style>
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr !important; } }
+  </style>
+</body>
+</html>
