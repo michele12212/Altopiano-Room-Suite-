@@ -137,27 +137,36 @@
 
       <div class="rooms__grid">
         <a class="room-card room-card--lg" href="camere.html">
-          <img src="assets/images/camera-romance.jpg" alt="Luxury Suite 1" />
+          <img src="assets/images/luxury-suite-1.jpg" alt="Luxury Suite 1 — Via Bainsizza" />
           <div class="room-card__overlay">
-            <span class="room-card__tag">Luxury Suite</span>
+            <span class="room-card__tag">Via Bainsizza · Stazione</span>
             <h3>Luxury Suite 1</h3>
-            <span class="room-card__meta">Letto king-size · Atmosfera intima</span>
+            <span class="room-card__meta">A pochi passi dalla stazione · Comfort premium</span>
           </div>
         </a>
 
         <a class="room-card room-card--md" href="camere.html">
-          <img src="assets/images/camera-goodvibes.png" alt="Luxury Suite 2" />
+          <img src="assets/images/luxury-suite-4.jpg" alt="Luxury Suite 4 — Via Bainsizza" />
           <div class="room-card__overlay">
-            <span class="room-card__tag">Luxury Suite</span>
+            <span class="room-card__tag">Via Bainsizza · Stazione</span>
+            <h3>Luxury Suite 4</h3>
+            <span class="room-card__meta">Design contemporaneo · Insonorizzata</span>
+          </div>
+        </a>
+
+        <a class="room-card room-card--md" href="camere.html">
+          <img src="assets/images/camera-goodvibes.png" alt="Luxury Suite 2 — Via Giuseppe Rosati" />
+          <div class="room-card__overlay">
+            <span class="room-card__tag">Via Giuseppe Rosati · Centro</span>
             <h3>Luxury Suite 2</h3>
             <span class="room-card__meta">Stile contemporaneo · Insonorizzata</span>
           </div>
         </a>
 
         <a class="room-card room-card--md" href="camere.html">
-          <img src="assets/images/camera-love.png" alt="Luxury Suite 3" />
+          <img src="assets/images/camera-love.png" alt="Luxury Suite 3 — Via Giuseppe Rosati" />
           <div class="room-card__overlay">
-            <span class="room-card__tag">Luxury Suite</span>
+            <span class="room-card__tag">Via Giuseppe Rosati · Centro</span>
             <h3>Luxury Suite 3</h3>
             <span class="room-card__meta">Toni sage · Luce calda</span>
           </div>
@@ -372,39 +381,71 @@
   <section class="section location" id="dove-siamo">
     <div class="wrap">
       <span class="eyebrow">Dove siamo</span>
-      <h2 class="section-title">Via Giuseppe Rosati 133, Foggia.</h2>
+      <h2 class="section-title">Due indirizzi, una sola ospitalità.</h2>
+      <p class="lead">
+        Due strutture nel cuore di Foggia: scegli la più vicina alla stazione
+        oppure quella nel centro storico. Reception 24/7 e staff multilingue
+        in entrambe.
+      </p>
 
-      <div class="location__grid">
-        <div class="location__info">
-          <p class="lead">
-            Nel cuore della città, in una via riservata e ben servita. Raggiungerci
-            è semplice sia in auto, sia in treno, sia in aereo.
-          </p>
-          <ul>
-            <li><span>Indirizzo</span><span>Via Giuseppe Rosati, 133 — 71121 Foggia (FG)</span></li>
-            <li><span>Telefono</span><span>+39 392 357 5870</span></li>
-            <li><span>Email</span><span>info@altopianorooms.it</span></li>
-            <li><span>Reception</span><span>Aperta 24/7 · staff multilingue</span></li>
-            <li><span>Check-in</span><span>Arrivo H24 · Express</span></li>
-            <li><span>Check-out</span><span>00:00 — 10:00</span></li>
-          </ul>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem; margin-top:3rem;">
 
-          <div style="margin-top:2rem;">
-            <a class="btn btn--gold" href="contatti.html">
-              Contattaci <span class="arrow">→</span>
-            </a>
+        <!-- Location 1: Bainsizza -->
+        <div>
+          <span class="eyebrow" style="color:var(--sand-dark);">Alla stazione</span>
+          <h3 style="font-size:1.6rem; margin-top:.5rem;">Via Bainsizza 1</h3>
+          <p style="color:var(--muted); margin-top:.5rem;">A un passo dalla stazione ferroviaria di Foggia.</p>
+          <div class="location__map" style="margin-top:1.5rem; min-height:340px;">
+            <iframe
+              src="https://www.google.com/maps?q=Via+Bainsizza+1,+Foggia&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              title="Mappa Altopiano Rooms Suite — Via Bainsizza">
+            </iframe>
           </div>
         </div>
 
-        <div class="location__map">
-          <iframe
-            src="https://www.google.com/maps?q=Via+Giuseppe+Rosati+133,+Foggia&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-            title="Mappa Altopiano Rooms Suite">
-          </iframe>
+        <!-- Location 2: Rosati -->
+        <div>
+          <span class="eyebrow" style="color:var(--sand-dark);">In centro</span>
+          <h3 style="font-size:1.6rem; margin-top:.5rem;">Via Giuseppe Rosati 133</h3>
+          <p style="color:var(--muted); margin-top:.5rem;">Nel cuore della città, in una via riservata.</p>
+          <div class="location__map" style="margin-top:1.5rem; min-height:340px;">
+            <iframe
+              src="https://www.google.com/maps?q=Via+Giuseppe+Rosati+133,+Foggia&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              title="Mappa Altopiano Rooms Suite — Via Giuseppe Rosati">
+            </iframe>
+          </div>
         </div>
+      </div>
+
+      <div style="margin-top:3rem; padding-top:2rem; border-top:1px solid var(--line); display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1.5rem;">
+        <div>
+          <div style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Telefono</div>
+          <div style="margin-top:.4rem;">+39 392 357 5870</div>
+        </div>
+        <div>
+          <div style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Email</div>
+          <div style="margin-top:.4rem;">info@altopianorooms.it</div>
+        </div>
+        <div>
+          <div style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Reception</div>
+          <div style="margin-top:.4rem;">Aperta 24/7 · multilingue</div>
+        </div>
+        <div>
+          <div style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Check-in</div>
+          <div style="margin-top:.4rem;">Arrivo H24 · Express</div>
+        </div>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <a class="btn btn--gold" href="contatti.html">
+          Contattaci <span class="arrow">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -434,11 +475,12 @@
         </div>
 
         <div>
-          <h4>Contatti</h4>
+          <h4>Le strutture</h4>
           <ul class="footer__list">
-            <li>Via Giuseppe Rosati 133</li>
+            <li>Via Bainsizza 1 — Stazione</li>
+            <li>Via Giuseppe Rosati 133 — Centro</li>
             <li>71121 Foggia (FG)</li>
-            <li>info@altopianorooms.it</li>
+            <li style="margin-top:.75rem;">info@altopianorooms.it</li>
             <li>+39 392 357 5870</li>
           </ul>
         </div>

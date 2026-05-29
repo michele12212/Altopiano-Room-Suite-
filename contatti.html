@@ -57,8 +57,12 @@
 
           <ul style="display:grid; gap:1.5rem; margin-top:2rem;">
             <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line);">
-              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Indirizzo</span>
-              <span>Via Giuseppe Rosati, 133<br/>71121 Foggia (FG) — Italia</span>
+              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Stazione</span>
+              <span>Via Bainsizza, 1<br/>71121 Foggia (FG) — Italia<br/><span style="font-size:.85rem; color:var(--muted);">A un passo dalla stazione</span></span>
+            </li>
+            <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line);">
+              <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Centro</span>
+              <span>Via Giuseppe Rosati, 133<br/>71121 Foggia (FG) — Italia<br/><span style="font-size:.85rem; color:var(--muted);">Nel cuore della città</span></span>
             </li>
             <li style="display:grid; grid-template-columns: 110px 1fr; gap:1rem; padding-bottom:1.25rem; border-bottom:1px solid var(--line);">
               <span style="font-size:.7rem; letter-spacing:.25em; text-transform:uppercase; color:var(--sand-dark);">Telefono</span>
@@ -129,9 +133,14 @@
                 <label for="camera">Tipologia camera</label>
                 <select id="camera" name="camera">
                   <option>Indifferente</option>
-                  <option>Luxury Suite 1</option>
-                  <option>Luxury Suite 2</option>
-                  <option>Luxury Suite 3</option>
+                  <optgroup label="Via Bainsizza 1 — Stazione">
+                    <option>Luxury Suite 1</option>
+                    <option>Luxury Suite 4</option>
+                  </optgroup>
+                  <optgroup label="Via Giuseppe Rosati 133 — Centro">
+                    <option>Luxury Suite 2</option>
+                    <option>Luxury Suite 3</option>
+                  </optgroup>
                 </select>
               </div>
             </div>
@@ -202,19 +211,39 @@
     </div>
   </section>
 
-  <!-- ============ MAP ============ -->
+  <!-- ============ MAPPE ============ -->
   <section class="section location" style="padding-top:0;">
     <div class="wrap">
       <span class="eyebrow">Dove siamo</span>
-      <h2 class="section-title">Via Giuseppe Rosati 133, Foggia.</h2>
-      <div class="location__map" style="margin-top:2rem; min-height: 500px;">
-        <iframe
-          src="https://www.google.com/maps?q=Via+Giuseppe+Rosati+133,+Foggia&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen
-          title="Mappa Altopiano Rooms Suite">
-        </iframe>
+      <h2 class="section-title">Due strutture a Foggia.</h2>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem; margin-top:2.5rem;">
+        <div>
+          <span class="eyebrow" style="color:var(--sand-dark);">Alla stazione</span>
+          <h3 style="font-size:1.5rem; margin-top:.5rem;">Via Bainsizza 1</h3>
+          <div class="location__map" style="margin-top:1rem; min-height:400px;">
+            <iframe
+              src="https://www.google.com/maps?q=Via+Bainsizza+1,+Foggia&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              title="Mappa Altopiano Rooms Suite — Via Bainsizza">
+            </iframe>
+          </div>
+        </div>
+        <div>
+          <span class="eyebrow" style="color:var(--sand-dark);">In centro</span>
+          <h3 style="font-size:1.5rem; margin-top:.5rem;">Via Giuseppe Rosati 133</h3>
+          <div class="location__map" style="margin-top:1rem; min-height:400px;">
+            <iframe
+              src="https://www.google.com/maps?q=Via+Giuseppe+Rosati+133,+Foggia&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              title="Mappa Altopiano Rooms Suite — Via Giuseppe Rosati">
+            </iframe>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -242,11 +271,12 @@
           </ul>
         </div>
         <div>
-          <h4>Contatti</h4>
+          <h4>Le strutture</h4>
           <ul class="footer__list">
-            <li>Via Giuseppe Rosati 133</li>
+            <li>Via Bainsizza 1 — Stazione</li>
+            <li>Via Giuseppe Rosati 133 — Centro</li>
             <li>71121 Foggia (FG)</li>
-            <li>info@altopianorooms.it</li>
+            <li style="margin-top:.75rem;">info@altopianorooms.it</li>
             <li>+39 392 357 5870</li>
           </ul>
         </div>
