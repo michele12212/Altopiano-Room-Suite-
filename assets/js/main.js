@@ -65,4 +65,62 @@
       }
     });
   });
+
+  /* ----- Room photo galleries ----- */
+  document.querySelectorAll('.gallery').forEach(gallery => {
+    const track = gallery.querySelector('.gallery__track');
+    const slides = gallery.querySelectorAll('.gallery__slide');
+    const prevBtn = gallery.querySelector('.gallery__btn--prev');
+    const nextBtn = gallery.querySelector('.gallery__btn--next');
+    const dotsContainer = gallery.querySelector('.gallery__dots');
+    const counter = gallery.querySelector('.gallery__counter');
+    if (!track || slides.length < 2) return;
+
+    const total = slides.length;
+    let current = 0;
+
+    // Build dots
+    if (dotsContainer) {
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'gallery__dot' + (i === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Vai alla foto ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    const updateUI = () => {
+      if (dotsContainer) {
+        dotsContainer.querySelectorAll('.gallery__dot').forEach((d, i) => {
+          d.classList.toggle('is-active', i === current);
+        });
+      }
+      if (counter) counter.textContent = (current + 1) + ' / ' + total;
+    };
+
+    const goTo = (i) => {
+      current = (i + total) % total;
+      track.scrollTo({ left: current * track.clientWidth, behavior: 'smooth' });
+      updateUI();
+    };
+
+    if (prevBtn) prevBtn.addEventListener('click', () => goTo(current - 1));
+    if (nextBtn) nextBtn.addEventListener('click', () => goTo(current + 1));
+
+    // Sync state when user swipes/scrolls manually
+    let scrollTimeout;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        const newIndex = Math.round(track.scrollLeft / track.clientWidth);
+        if (newIndex !== current) {
+          current = newIndex;
+          updateUI();
+        }
+      }, 80);
+    });
+
+    updateUI();
+  });
 })();
